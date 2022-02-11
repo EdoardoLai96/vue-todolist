@@ -1,37 +1,45 @@
 const app = new Vue({
     el: '#app',
     data: {
-        newTodo : [""],
+        newTodo : [""]
+        ,
         todoList : [
             {
                 text : "mangiare",
-                done : true
+                done : false
             },
             {
                 text : "studiare",
-                done : true
+                done : false
             },
             {
                 text : "dormire",
-                done : true
+                done : false
             },
             {
                 text : "vedere la documentazione",
-                done : true
+                done : false
             },
         ],
     },
     methods: {
         addTodo(){
-           this.todoList.push(this.newTodo)
+                if(this.newTodo != ""){
+                    this.todoList.push(
+                        {
+                            text: this.newTodo,
+                            done: false
+                        }
+                        )
+                    }
+                
         },
         removeTodo(index){
             console.log(this.todoList, index)
             this.todoList.splice(index,1)
         },
-        prova(){
-            this.todoList.done = !this.todoList.done
-            console.log(this.todoList.done);
+        prova(index){
+            this.todoList[index].done = !this.todoList[index].done
         }
     }
 })

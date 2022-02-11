@@ -34,3 +34,6 @@ main li{
 main li i {
     padding-right: 5px;
 }
+main li:hover{
+    cursor: pointer;
+}

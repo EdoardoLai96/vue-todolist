@@ -15,12 +15,15 @@
             <button @click="addTodo" id="submitTodo">Aggiungi</button>
         </header>
         <main>
-            <ul>
-                <li @click="prova()"  v-for="(item, index) in todoList"> 
-                    <p :class="item.done == true ? 'sbarrato' : '' ">{{item.text}}</p>
+            <ul v-if="todoList.length">
+                <li  v-for="(item, index) in todoList" > 
+                    <p @click="prova(index)" :class="(item.done == true) ? 'sbarrato' : '' ">{{item.text}}</p>
                     <i @click="removeTodo(index)" class="fa-solid fa-xmark" :class=""></i>
                 </li>
             </ul>
+            <div v-else>
+              <h1>Non ci sono todos</h1>
+            </div>
         </main>
     </div>
 
