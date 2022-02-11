@@ -27,6 +27,9 @@ main li{
     display: flex;
     justify-content: space-between;
 }
+.sbarrato{
+    text-decoration: line-through
+}
 
 main li i {
     padding-right: 5px;

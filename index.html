@@ -16,8 +16,9 @@
         </header>
         <main>
             <ul>
-                <li v-for="(item, index) in todoList">{{item}}
-                    <i class="fa-solid fa-xmark"></i>
+                <li @click="prova()"  v-for="(item, index) in todoList"> 
+                    <p :class="item.done == true ? 'sbarrato' : '' ">{{item.text}}</p>
+                    <i @click="removeTodo(index)" class="fa-solid fa-xmark" :class=""></i>
                 </li>
             </ul>
         </main>
