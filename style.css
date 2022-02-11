@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 100px;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+main{
+    width: 800px;
+    margin: auto;
+}
+
+main ul{
+    background-color: orange;
+    list-style: none;
+}
+
+main li{
+    display: flex;
+    justify-content: space-between;
+}
+
+main li i {
+    padding-right: 5px;
+}
