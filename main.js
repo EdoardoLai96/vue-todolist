@@ -32,6 +32,7 @@ const app = new Vue({
                         }
                         )
                     }
+                    this.newTodo="";
                 
         },
         removeTodo(index){
