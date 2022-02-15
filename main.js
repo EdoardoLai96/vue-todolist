@@ -24,10 +24,10 @@ const app = new Vue({
     },
     methods: {
         addTodo(){
-                if(this.newTodo != ""){
+                if(this.newTodo.trim().length >0){
                     this.todoList.push(
                         {
-                            text: this.newTodo,
+                            text: this.newTodo.trim(),
                             done: false
                         }
                         )
@@ -39,7 +39,7 @@ const app = new Vue({
             console.log(this.todoList, index)
             this.todoList.splice(index,1)
         },
-        prova(index){
+        barrato(index){
             this.todoList[index].done = !this.todoList[index].done
         }
     }
